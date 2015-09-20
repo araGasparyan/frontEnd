@@ -1,0 +1,36 @@
+/* 
+    Document   : newcss
+    Created on : Feb 12, 2015, 6:31:55 PM
+    Author     : studentc
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+
+a:link{
+    color: blue;
+ 
+}
+
+a:visited{
+    color: magenta;
+ 
+}
+
+
+a:hover{
+    color: red;
+ 
+font-size: 200%;
+}
+
+a:active{
+    color: yellow;
+ 
+}
+
+.testclass:hover{
+    color: aquamarine;
+    font-size: 100%;
+}

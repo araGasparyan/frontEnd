@@ -1,0 +1,63 @@
+
+
+.myclass1{
+					background-image:url("img.jpg");
+                                        
+					
+					width:50%;
+					height:150px;
+					border: solid 1px black;
+				
+                                        	
+				}
+
+                                .myclass2{
+					background-image:url("img.jpg");
+                                        
+					background-repeat: repeat-x; /* կամ repeat-x */
+                                        				background-position: right bottom;
+					width:50%;
+					height:150px;
+					border: solid 1px black;
+				
+                                        	
+				}
+                                
+                                .myclass3{
+					background-image:url("img.jpg");
+                                        
+					background-repeat: repeat-y; /* կամ repeat-x */
+                                        				background-position: right bottom;
+					width:50%;
+					height:150px;
+					border: solid 1px black;
+				
+                                        	
+				}
+                                
+                                .myclass4{
+					background-color: green;
+				
+                                        	
+				}
+
+
+#a{
+    background-image:url("img.jpg");
+                                        
+					background-repeat: no-repeat;
+                                        background-position: right top;
+    		width:50%;
+					height:150px;
+					border: solid 1px black;
+}
+
+#b{
+		font-size:30px;
+}
+
+#c{
+		font-size:10px;
+}
+
+

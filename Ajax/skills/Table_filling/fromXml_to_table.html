@@ -1,0 +1,88 @@
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+
+.gr {background-color: green}
+
+</style>
+
+</head>
+<body>
+
+
+
+ <table id="table" style="border: 1px solid red; border-spacing: 10px;">
+  <tr>
+    <td>ID</td>
+    <td>Name</td>
+    <td>NickName</td>
+    <td>LName</td>
+     <td>Tel</td>
+     <td>email</td>
+  </tr>
+
+ 
+</table> 
+
+
+
+	<script type="text/javascript">
+	var rows="";
+	var table = document.getElementById("table");
+	
+	
+
+	  if(window.XMLHttpRequest)
+	  {
+	     xmlhttp=new XMLHttpRequest();
+	  }
+
+	xmlhttp.open("GET","http://ablog.gratun.am/htmlcssjs/ajaxex/contacts.php",true);
+	xmlhttp.send();
+
+
+	  xmlhttp.onreadystatechange=function()
+	  		{
+	  		  
+			  if(xmlhttp.readyState==4 && xmlhttp.status==200)
+	    	   {
+	    	   		var xmlDoc = xmlhttp.responseXML.childNodes[1].childNodes;
+	    	   		row=xmlDoc.length;
+
+					for(var i=0; i<row;i++){
+var temp="";
+if(xmlDoc[i].getElementsByTagName("name")[0].childNodes.length<2){
+temp="Nickname chuni";
+}else{
+temp=xmlDoc[i].getElementsByTagName("name")[0].childNodes[1].innerHTML;
+}
+
+
+				
+			text="<tr><td>"+xmlDoc[i].id+"</td><td>"+xmlDoc[i].getElementsByTagName("name")[0].childNodes[0].nodeValue+"</td>"
+			+"<td>"+temp+"</td>"
+	+"<td>"+ xmlDoc[i].getElementsByTagName("lname")[0].innerHTML+"</td>"	    	   		
+	    	   		+"<td>"+ xmlDoc[i].getElementsByTagName("tel")[0].innerHTML+"</td>"
+	    	   		+"<td>"+ xmlDoc[i].getElementsByTagName("email")[0].innerHTML+"</td></tr>";
+table.innerHTML+=text;
+
+
+
+					}
+	    	
+	           }
+
+	        }
+	
+
+
+	
+
+
+
+	</script>
+</body>
+</html>

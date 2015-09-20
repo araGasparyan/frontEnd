@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style> form label{width: 100px; display: block; float: left;}</style>
+    </head>
+    <body>
+        <form action="" name="text">
+		<label>First name:</label>    <input type="text" name="firstname"> <br>
+ <label>Last name:</label>  <input type="text" name="lastname"> <br>
+ <label>Third name:</label>
+  <input type="text" name="thirdname"> <br>
+ <label>Age:</label> <input type="text" name="age"> <br>
+ <label>Email։</label>   <input type="email" name="mail"><br>
+	
+        <hr>
+        
+        <div id="txtarea" style="float: left">
+        <textarea style="resize: both;" rows="4" cols="50"></textarea>
+        </div>
+       
+        <input style="position: relative; cursor: pointer;" type="button" name="rbutton" value="Remove"><br>
+       
+        <hr style="clear:both">
+        
+        <label>Job:</label> 
+        <select style="margin-left: 40px;" name="job">
+			<option value="">Choose</option>
+			<option value="">Do not have job</option>
+			<option value="yes">Have a job</option>
+			<option value="">Student</option>
+		</select>
+        
+        <div id="opt" style="display: none;">
+            <label>money:</label> 
+        <select style="margin-left: 40px;" name="money">
+			<option value="">Choose</option>
+			<option value="">less than 200$</option>
+			<option value="yes">Between 200$ and 800$</option>
+			<option value="">More than 800$</option>
+		</select>
+        </div>
+        
+        <hr>
+        
+        <input style="margin-left: 50%;" type="submit" value="SEND"><br>
+        
+        
+        </form>
+        <script type="text/javascript" src="newjavascript.js"></script>
+    </body>
+</html>

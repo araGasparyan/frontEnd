@@ -1,0 +1,125 @@
+<html>
+<head>
+	<title>XML geolocation example</title>
+	<meta charset="UTF-8">
+<style>
+	
+.client {font-size: 40px; background-color: blue;}
+
+
+</style>
+
+
+</head>
+<body>
+
+
+	<form name="geolocation">
+		Enter your IP adress: <input id="target" type="text" name="name" placeholder="IP adress"><br>
+		<input id="find" type="button" value="Find">
+ 	</form>
+
+	<table id="data" style="border: 1px solid black; border-spacing: 10px;">
+	  		<tr><td>IP:</td></tr>
+		    <tr><td>CountryCode:</td></tr>
+		    <tr><td>CountryName:</:td></tr>
+		    <tr><td>RegionCode:</td></tr>
+			<tr><td>RegionName:</td></tr>
+	   		<tr><td>City:</td></tr>
+	   		<tr><td>ZipCode:</td></tr>
+		    <tr><td>TimeZone:</td></tr>
+		    <tr><td>Latitude:</td></tr>
+			<tr><td>Longitude:</td></tr>
+	   		<tr><td>MetroCode:</td></tr>
+	</table> 
+
+	
+
+	<script type="text/javascript">
+	var target=document.getElementById("target");
+	var butt=document.getElementById("find");
+	var data=document.getElementById("data");
+	var tlength = data.childNodes[1].children.length;
+	
+	
+	butt.onclick=function(){
+	getDataFromXML();
+	
+}
+
+
+	function getDataFromXML()
+	{
+
+	  if(window.XMLHttpRequest)
+	  {
+	     xmlhttp=new XMLHttpRequest();
+	  }
+
+	xmlhttp.open("GET","http://freegeoip.net/xml/"+target.value,true);
+	xmlhttp.send();
+
+
+	  xmlhttp.onreadystatechange=function()
+	  		{
+	  		  
+			  if(xmlhttp.readyState==4 && xmlhttp.status==200)
+	    	   {
+	    	   		var xmlDoc = xmlhttp.responseXML.childNodes[0].childNodes;
+	    	   		//arrays
+	    	   		var mainel = [];
+	    	   		
+	    	   		for(i = 0; i<xmlDoc.length; i++){
+	    	   			if(xmlDoc[i].nodeName!="#text"){
+	    	   				mainel.push(xmlDoc[i]);
+	    	   			}
+	    	   		}
+
+					//console.log(mainel);
+
+
+					for(i = 0; i<tlength; i++){
+
+
+					curTd=document.createElement("td");
+	    	   		curTd.innerHTML=mainel[i].innerHTML;
+
+	    	   		if(i==2){
+	    	   			curTd.className="client";
+	    	   			console.log("sdasdsadasd");
+													}
+	    	   			    	   		data.childNodes[1].children[i].appendChild(curTd);
+
+
+
+
+
+	    	   		}
+
+
+	    // 	   		var contact = xmlDoc.getElementById(userID);
+	    // 	   		var name = contact.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+	    // 	   		var lname = contact.getElementsByTagName("lname")[0].innerHTML;
+	    // 	   		var tel = contact.getElementsByTagName("tel")[0].innerHTML;
+	    // 	   		var email = contact.getElementsByTagName("email")[0].innerHTML;
+	    	   		
+					// myForm['name'].value=name;
+					// myForm['lname'].value=lname;
+					// myForm['tel'].value=tel;
+					// myForm['email'].value=email;
+	    	   		
+
+	    	
+	           }
+
+	        }
+	
+
+
+		return false;
+	}
+
+
+	</script>
+</body>
+</html>

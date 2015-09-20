@@ -1,0 +1,29 @@
+/* 
+    Document   : style
+    Created on : Feb 24, 2015, 8:23:57 PM
+    Author     : studentc
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+input, select{
+    margin-bottom: 4px;
+}
+
+label{
+    width: 100px;
+   display: block;
+   float: left;
+   border: none;
+}
+
+.radio{
+/*      border: 3px blue solid;*/
+   /*margin-top: 40px;*/
+   float:left;
+}
+
+div{
+/*    border: 1px blue solid;*/
+    margin-bottom: 2px;
+}

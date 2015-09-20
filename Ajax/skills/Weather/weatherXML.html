@@ -1,0 +1,129 @@
+<html>
+<head>
+	<title>XML weather example</title>
+	<meta charset="UTF-8">
+<style>
+	
+.client {font-size: 40px; background-color: blue;}
+label {color: green; width: 100px; display: block; float: left;}
+
+</style>
+
+
+</head>
+<body>
+
+
+    <form name="city">
+		Enter city: <input style="margin-left: 25px;" value="" id="target" type="text" name="name" placeholder="city"><br>
+		<input style="margin-top: 5px;" id="find" type="button" value="Show weather">
+ 	</form>
+    
+    <div id="main">
+        
+    </div>	
+    
+    
+    <div id="forecast">
+        
+        
+    </div>
+    
+    
+
+	<script type="text/javascript">
+	
+	var main=document.getElementById("main");
+	var forecast=document.getElementById("forecast");
+        var butt=document.getElementById("find");
+        var target=document.getElementById("target");
+	var data=document.getElementById("data");
+	
+	
+	
+	butt.onclick=function(){
+            main.innerHTML="";
+	getDataFromXML();
+	
+}
+
+
+	function getDataFromXML()
+	{
+
+	  if(window.XMLHttpRequest)
+	  {
+	     xmlhttp=new XMLHttpRequest();
+	  }
+          
+         
+          
+        target.value = target.value[0].toUpperCase()+target.value.substring(1,target.value.length);
+         //console.log(target.value);
+
+	xmlhttp.open("GET","http://api.openweathermap.org/data/2.5/weather?q="+target.value+"&mode=xml",true);
+	xmlhttp.send();
+
+
+	  xmlhttp.onreadystatechange=function()
+	  		{
+	  		  
+			  if(xmlhttp.readyState==4 && xmlhttp.status==200)
+	    	   {
+	    	   		var xmlDoc = xmlhttp.responseXML.childNodes[0].children;
+	    	   	
+                        for(var i=0;i<xmlDoc.length-4;i++){
+                            
+                           var label = document.createElement("label");
+                           label.innerHTML=xmlhttp.responseXML.childNodes[0].children[i].tagName+": ";
+                           main.appendChild(label);
+                           if(i==0){
+                               var tmp=xmlhttp.responseXML.childNodes[0].children[i].childNodes;
+                               main.innerHTML+=target.value+" (longitude= "+tmp[1].outerHTML.split('"')[1]+", latitude= "+
+                                       tmp[1].outerHTML.split('"')[3]+", country: "+tmp[3].innerHTML+", sunrise: "+
+                                       tmp[5].outerHTML.split('"')[1]+", sunset: "+
+                                       tmp[5].outerHTML.split('"')[3]+")<br>";  
+                           } else if(i==1){
+                               main.innerHTML+=xmlhttp.responseXML.childNodes[0].children[i].outerHTML.split('"')[1]+" "+
+                                       xmlhttp.responseXML.childNodes[0].children[i].outerHTML.split('"')[7]+"<br>";
+//                    console.log(xmlhttp.responseXML.childNodes[0].children[i].outerHTML.split('unit="')[1].substring(0,6));          
+//                    console.log(xmlhttp.responseXML.childNodes);
+                           } else if(i==2){
+                               main.innerHTML+=xmlhttp.responseXML.childNodes[0].children[i].outerHTML.split('"')[1]+" "+
+                                       xmlhttp.responseXML.childNodes[0].children[i].outerHTML.split('unit="')[1].substring(0,1)+"<br>";
+                           }
+                           
+                           
+                           else if(i==3){
+                               main.innerHTML+=xmlhttp.responseXML.childNodes[0].children[i].outerHTML.split('"')[1]+" "+
+                                       xmlhttp.responseXML.childNodes[0].children[i].outerHTML.split('unit="')[1].substring(0,3)+"<br>";
+                           }
+                           
+                           if(i==4){
+                               var tmp=xmlhttp.responseXML.childNodes[0].children[i].childNodes;
+                               main.innerHTML+=tmp[1].outerHTML.split('"')[3]+", speed: "+tmp[1].outerHTML.split('"')[1]+
+                                       ", direction: "+tmp[3].outerHTML.split('"')[1]+" ("+tmp[3].outerHTML.split('"')[5]+ ")<br>";
+                           
+                              
+                           }
+                           
+                           else if(i==5){
+                               main.innerHTML+=xmlhttp.responseXML.childNodes[0].children[i].outerHTML.split('"')[3]+"<br>";
+                           }
+                              
+                           main.innerHTML+="<br>";
+                       }
+                          //  console.log(xmlhttp.responseXML.childNodes[0].children[i].tagName);
+                        }
+	    	   		}	    	   		
+	    	
+	           }
+
+	        
+	
+
+
+
+	</script>
+</body>
+</html>

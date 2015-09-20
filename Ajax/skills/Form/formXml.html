@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+	<form name="contacts">
+		<input type="text" name="name" placeholder="name"><br>
+		<input type="text" name="lname" placeholder="last name"><br>
+		<input type="text" name="tel" placeholder="telephone"><br>
+		<input type="text" name="email" placeholder="email"><br><br>
+		<select placeholder="user ID" name="userID" onchange="setUserID(this)">
+			<option value="12">user 12</option>
+			<option value="13">user 13</option>
+			<option value="14">user 14</option>
+			<option value="15">user 15</option>
+			<option value="16">user 16</option>
+		</select><br><br>
+ 	</form>
+
+	<script type="text/javascript">
+	var userID=12;
+	var myForm = document.forms["contacts"];
+	function setUserID(usr)
+	{
+		userID=usr.value;
+		getDataFromXML();
+	}
+
+	function getDataFromXML()
+	{
+
+	  if(window.XMLHttpRequest)
+	  {
+	     xmlhttp=new XMLHttpRequest();
+	  }
+
+xmlhttp.open("GET","http://ablog.gratun.am/htmlcssjs/ajaxex/contacts.php",true);
+	xmlhttp.send();
+
+
+	  xmlhttp.onreadystatechange=function()
+	  		{
+	  		  
+			  if(xmlhttp.readyState==4 && xmlhttp.status==200)
+	    	   {
+	    	   		var xmlDoc = xmlhttp.responseXML;
+	    	   		var contact = xmlDoc.getElementById(userID);
+	    	   		var name = contact.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+	    	   		var lname = contact.getElementsByTagName("lname")[0].innerHTML;
+	    	   		var tel = contact.getElementsByTagName("tel")[0].innerHTML;
+	    	   		var email = contact.getElementsByTagName("email")[0].innerHTML;
+	    	   		
+					myForm['name'].value=name;
+					myForm['lname'].value=lname;
+					myForm['tel'].value=tel;
+					myForm['email'].value=email;
+	    	   		//console.log(name);
+
+	    	
+	           }
+
+	        }
+	
+
+
+		return false;
+	}
+
+	/*
+
+		Ստեղծել ֆորմա հետևյալ դաշտերով
+
+		անուն
+		ազգանուն
+		հեռ․ համար
+		էլ․փոստ
+		և ստեղն։ Ստեղնին սեղմելիս , ֆորման պիտի լցվի id=14 կոնտակտի տվյալներով
+
+		Հարցումը GET , հղումը՝ http://ablog.gratun.am/htmlcssjs/ajaxex/contacts.php
+	*/
+
+
+	</script>
+</body>
+</html>

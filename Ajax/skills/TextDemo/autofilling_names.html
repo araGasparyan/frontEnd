@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title>Վարժություն 5.3</title>
+</head>
+<style type="text/css">
+	
+	#names{
+		width: 200px;
+		min-height: 100px;
+  		border: 1px solid green;	
+		}
+</style>
+<body>
+
+<input list="names" oninput="getNamesAJAX(this)">
+
+<datalist id="names">
+	
+</datalist>
+
+
+<div id="test" style="float: right; display: table; border: 1px red dotted;">
+    
+    
+    
+    
+</div>
+
+
+<script type="text/javascript">
+var datalistNames=document.getElementById("names");	
+var test=document.getElementById("test");
+function getNamesAJAX(inp)
+{
+	
+	var xmlhttp;
+	var respNames;
+	var str = inp.value;
+	datalistNames.innerHTML="";
+        test.innerHTML="";
+	if (window.XMLHttpRequest)
+	  {
+	     xmlhttp=new XMLHttpRequest();
+	  }
+	  xmlhttp.onreadystatechange=function()
+	  		{
+	  		  
+			  if(xmlhttp.readyState==4 && xmlhttp.status==200)
+	    	   {
+	    	    	
+                        test.innerHTML=xmlhttp.responseText;
+                        
+	    	    respNames=xmlhttp.responseText.split(", ");
+				respNames.sort();
+
+	            for (var i = 0;i<respNames.length; i++) 
+	            {
+	            	//Method 1 
+		            	//datalistNames.innerHTML+="<option value='"+respNames[i]+"'>";
+	            	//End of Method 1
+	            	
+	            	//Method 2
+	            		var currOpt = document.createElement("option");
+						currOpt.value=respNames[i];
+	            		datalistNames.appendChild(currOpt);
+	            	//End of Method 2
+	            }
+
+         
+	           }
+
+	        }
+	xmlhttp.open("GET","http://ablog.gratun.am/htmlcssjs/ajaxex/hint.php?q="+str,true);
+	xmlhttp.send();
+}
+
+</script>
+</body>
+</html>

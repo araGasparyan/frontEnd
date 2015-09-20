@@ -1,0 +1,34 @@
+
+<!-- saved from url=(0051)http://ablog.gratun.am/htmlcssjs/exers/cookies.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title></title>
+	<meta charset="utf-8"> 
+	<script type="text/javascript">
+		//alert(document.cookie);
+		
+		function setCookie()
+		{
+
+			var cookieVal = document.forms["sd"]["tt"].value;
+			document.cookie="username="+cookieVal+";expires=18 Dec 2016 12:00:00 UTC";
+
+
+			return false;
+		}
+
+	</script>
+	
+</head>
+<body>
+
+
+<form id="sd" onsubmit="return setCookie()">
+	<input type="text" name="tt" placeholder="Ձեր անունը">
+	<input type="submit" value="Գրանցել">
+</form>
+
+
+
+
+
+</body></html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+           div {margin: 0px auto; width: 200px;} 
+           #main:hover{color: red; cursor: cell}
+           #main{margin-bottom: 20px;}
+            #contents{display: none;}
+           #contents div:hover{background-color: red; color: green;}
+           #main1:hover{color: red; cursor: cell}
+           #main1{margin-bottom: 20px;}
+            #contents1{display: none;}
+           #contents1 div:hover{background-color: red; color: green;}
+            
+        </style>
+        
+        
+    </head>
+    <body>
+        
+        
+         
+        <div id="main">press me!!!</div>
+        
+        
+        <div id="contents">
+            
+            <div id="test1">first</div>
+            <div>second</div>
+            <div>third</div>
+            <div>forth</div>
+            
+            
+        </div>
+        
+        
+        <br>
+        
+          <div id="main1">press me again!!!</div>
+        
+        
+        <div id="contents1">
+            
+            <div>first</div>
+            <div>second</div>
+            <div>third</div>
+            <div>forth</div>
+            
+            
+        </div>
+
+<script src="jquery-1.11.2.min.js"></script>
+
+<script>
+   
+     $(document).ready(function(){
+         
+  $("#main").click(function(){
+        $("#contents").slideToggle("slow");
+   });
+   
+   $("#main1").click(function(){
+        $("#contents1").fadeToggle(3000);
+   });
+
+   
+});
+
+
+
+
+    
+</script>
+
+
+    </body>
+</html>

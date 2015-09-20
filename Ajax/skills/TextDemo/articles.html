@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <br>
+        <br>
+        <div id="test" style="border: 1px red solid; display: table; margin: 0px auto;"></div>
+        
+        
+        
+        
+        
+        <script>
+          var xmlhttp;
+          var myTimeDiv=document.getElementById("test");
+if (window.XMLHttpRequest)
+  {
+  	  	xmlhttp=new XMLHttpRequest();
+  }
+else
+  {
+  	// միայն IE6, IE5 դիտարկիչների համաար
+  	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+var x=function(){
+    console.log("sdasd");
+xmlhttp.open("GET","http://ablog.gratun.am/htmlcssjs/ajaxex/getnewarticles.php",true);
+xmlhttp.send();
+
+xmlhttp.onreadystatechange=function()
+  {
+  	{
+	  		 if(xmlhttp.readyState==4 && xmlhttp.status==200)
+	    	   {
+	    	    	
+	    	    myTimeDiv.innerHTML+=xmlhttp.responseText+"<br>";
+	           }
+	        }
+  }
+}
+
+setInterval(x,10000);  
+        </script>
+        
+        
+        
+        
+    </body>
+    
+    
+    
+    
+</html>

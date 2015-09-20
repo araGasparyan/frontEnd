@@ -1,0 +1,26 @@
+/* 
+    Document   : newcss
+    Created on : Feb 12, 2015, 8:07:06 PM
+    Author     : studentc
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+
+
+.lc {list-style-type: square}
+
+.lr {
+    list-style-image:url("1.png");
+}
+
+
+.lc1 {list-style-type:armenian}
+
+.lc2 {list-style-type:upper-latin}
+
+.lc3 {list-style-type:lower-greek}

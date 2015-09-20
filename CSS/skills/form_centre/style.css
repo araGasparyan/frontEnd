@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 26, 2015, 10:33:41 PM
+    Author     : matenadaran
+*/
+
+body{
+/*background:-webkit-gradient(linear, 80% 20%, 10% 21%, from(#FFFF00), to(#0000B5))*/
+
+background-color: gray;
+
+}
+
+.fon{
+   // border: 1px red solid;
+    width: 700px;
+    
+}
+
+header{
+    background-color: activeborder;
+    height: 100px;
+    width: 700px;
+    position: relative;
+    
+}
+
+
+header h1{
+    position: absolute;
+left: 0;
+right: 0;
+top: 0;
+    text-shadow:5px 19px 8px #000000;
+}
+
+nav{
+    background-color: yellow;
+    height: 800px;
+    width: 200px;
+   float: right;
+    
+}
+
+section{
+    background-color: tomato;
+    height: 800px;
+    width: 500px;
+   float: right;
+    
+}
+
+.sub h3{
+    background-color: blue;
+    height: 50px;
+    width: 80%;
+    
+    
+}
+
+
+footer{
+    background-color: aquamarine;
+    height: 50px;
+    width: 700px;
+    clear: right;
+    
+}

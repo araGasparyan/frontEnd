@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+         
+        
+        <div id="test1" style="border: red 1px solid; display: table; cursor: pointer;">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+            Appear!!!
+        </div>
+       
+        <br>
+        <br>
+        
+        <form action="" name="myform" onsubmit="" style="display: none;">
+		login : <input type="text" name="login"><br>
+                password : <input type="password" name="password"><br>
+		<input type="submit" value="Send"><br>
+        </form>
+        
+        <div id="massage" style="margin-top: 5px;"></div>
+        
+        
+      
+        
+        <script type=text/javascript> 
+            var a = document.getElementById("test1");
+            var form=document.forms["myform"];
+            var massages=document.getElementById("massage");
+      
+  a.onclick=function(){
+      if(form.style.display=='none')
+            form.style.display='block';
+        else form.style.display='none';
+                             }
+                             
+                             
+                             form.onsubmit=function (){
+                                 massages.innerHTML="";
+                        if(form["login"].value=="")
+                        {
+                           massages.innerHTML+="Login field is empty"+"<br>";
+                           return false;
+                        }
+                         
+                                              
+        
+        if(form["login"].value.indexOf("@")==-1)
+                        {
+                           massages.innerHTML+="Not an email"+"<br>"; 
+                                                      return false;
+                        } 
+        
+         if(form["login"].value.length>=15)
+                        {
+                           massages.innerHTML+="Too long email"+"<br>"; 
+                           return false;
+                        } 
+                        
+        massages.innerHTML+="Good job"+"<br>"; 
+        return false;
+                                 
+                             }
+                             
+                             
+                             
+                             
+                             
+                         </script>
+      
+            
+    </body>
+</html>

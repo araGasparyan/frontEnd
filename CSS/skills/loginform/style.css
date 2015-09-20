@@ -1,0 +1,126 @@
+/* 
+    Document   : style
+    Created on : Feb 24, 2015, 8:23:57 PM
+    Author     : studentc
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+
+
+ label{
+    
+         width:29px;
+    height:26px;
+    background-image: url("login_form.jpg");
+    margin-right: 4px;
+   
+}
+
+#loginbutton input{
+    margin-top: 5px;
+    width: 166px;
+    background-color:	dimgray;
+    border-style: inset;
+    border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+}
+
+.head label{
+    
+   width: 240px;
+    height:50px;
+    background-image: url("login_form.jpg");
+     background-position:-30px -23px;
+}
+
+.facebook label{
+    width: 179px;
+    height:25px;
+    background-image: url("login_form.jpg");
+     background-position: -61px -100px;
+}
+
+#loginfield{
+  
+   display: table;
+    margin: 0 auto;
+    margin-bottom: 2px;
+}
+
+.head {
+     display: table;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+.facebook{
+     display: table;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+#passwfield{
+     display: table;
+    margin: 0 auto;
+}
+
+#loginbutton{
+    display: table;
+    margin: 0 auto;
+}
+
+#usernamepic{
+  
+    background-position: -61px -154px;
+   
+}
+
+#passwordpic{
+    background-position: -61px -190px;
+   
+}
+
+.centre label{
+      display: inline;
+   float: left;
+}
+
+
+input{
+    height: 23px;
+}
+
+li input{
+    clear: both;
+}
+
+
+/** {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}*/
+
+
+
+
+.centre{
+   position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+top: 25%;
+
+border-top: 20px #506487 solid;
+border-bottom: 20px #506487 solid;
+border-left: 30px #506487 solid;
+border-right: 30px #506487 solid;
+   border-radius: 10px;
+   width: 240px;
+ height: 280px;
+}

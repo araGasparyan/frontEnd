@@ -1,0 +1,58 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        
+        
+        
+     
+
+<div id="testid" onclick="myclick()"> 
+        
+            
+            BEFORE CLICK
+        
+        </div>
+        
+        <br>
+
+        <div id="colordiv" onclick="myclick1()"  style="width:200px; height: 100px; display: table; border: 1px red solid; margin: 0px auto; background-color: blue; ">
+
+
+   <script type="text/javascript">
+            var i=0;
+            function myclick(){
+                //i++;
+                var ob=document.getElementById("testid");
+                ob.innerHTML="Clicked "+(i++);
+            }
+            
+            
+            var ob1=document.getElementById("colordiv");
+                        function myclick1(){
+                if(ob1.style.backgroundColor=="blue")
+                                ob1.style.backgroundColor="yellow";
+                            else
+                                ob1.style.backgroundColor="blue";
+            }
+            
+            
+        </script>
+
+        
+        
+        
+        
+        
+        
+        
+        
+    </body>
+</html>

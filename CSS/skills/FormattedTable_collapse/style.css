@@ -1,0 +1,41 @@
+.classred{
+background-color: red;
+font-size:15px;
+}
+
+.classgreen{
+background-color: green;
+font-size:25px;
+}
+
+.classyellow{
+background-color: yellow;
+font-size:35px;
+}
+
+.classwhite{
+background-color: white;
+font-size:40px;
+}
+
+.tblinit td{
+    border: solid 1px green;
+text-align: center;
+}
+
+.tbl1{border-collapse:collapse;}
+
+
+#a{
+		font-size:100px;
+}
+
+#b{
+		font-size:30px;
+}
+
+#c{
+		font-size:10px;
+}
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+    </head>
+    <body>
+      
+        <select id="test1">
+            <option value="clock.jpg">clock</option>
+            <option value="database.png">database</option>
+            <option value="man.JPG">man</option>
+                    </select>
+        
+        <br>
+        <br>
+        <br>
+        
+        <div style="margin-left: 250px; border: 2px yellow dotted; width: 400px;"  id="test2">
+            
+            <img id="test3">
+            
+        </div>
+
+<script src="jquery-1.11.2.min.js"></script>
+
+<script>
+   
+     $(document).ready(function(){
+         
+  $("#test1").change(function(){
+       $("#test2").html($("#test3").attr("src",$("#test1").val()));
+        
+	});
+ 
+});
+    
+</script>
+
+
+    </body>
+</html>

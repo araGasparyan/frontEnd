@@ -1,0 +1,36 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 14, 2015, 11:36:38 AM
+    Author     : Ara
+*/
+
+h1{
+ font-size:24px;
+ color:blue;
+ }
+ 
+h2{
+ font-size:20px;
+ color:red;
+ }
+
+p{
+ font-size:18px;
+ }
+ 
+ img{
+    border: solid 2px green;
+ }
+ a{
+     font-size: 20px;
+ }
+ 
+ .fonclass{
+     background-image: url("fon.png");
+ }
+ 
+ 

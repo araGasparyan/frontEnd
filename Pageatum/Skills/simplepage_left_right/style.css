@@ -1,0 +1,120 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 22, 2015, 10:05:18 PM
+    Author     : matenadaran
+*/
+
+.part{
+    border-style: solid;
+    border-color: blue;
+}
+
+#header{
+    width: 800px;
+    height: 150px;
+    background-color: bisque;
+}
+
+#footer{
+    position: relative;
+    top: 5px;
+    width: 800px;
+    height: 70px;
+    background-color: cadetblue;
+     clear: both;
+  
+}
+
+#header h1{
+    margin-left: 20px;
+}
+
+
+.main{
+/*   border-style: solid;
+    border-color: red;*/
+    width: 806px;
+    margin: auto;
+}
+
+img{
+    position: absolute;
+    margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+    width: 200px;
+    height: 200px;
+
+ 
+}
+
+
+#link{
+    width: 250px;
+    height: 500px;
+     
+    background-color: yellow;
+    
+  
+}
+
+
+#notlink{
+    width: 236px;
+    height: 250px;
+     text-align: center;
+    background-color: yellow;
+    
+  
+}
+
+
+#picture{
+    width: 236px;
+    height: 244px;
+    background-color: darkolivegreen;
+    position: relative;
+    top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+      clear: both;
+ 
+}
+
+#something{
+    width: 300px;
+    height: 500px;
+    background-color: aqua;
+}
+
+#something p{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.fl div{
+    float: right;
+}
+
+.fr h3{
+    float: right;
+    margin-right:  10px;
+}
+
+#link ul{
+     list-style: none;
+   margin-top: 100px;
+    
+}

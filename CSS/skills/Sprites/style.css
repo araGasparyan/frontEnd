@@ -1,0 +1,49 @@
+/* 
+    Document   : style
+    Created on : Feb 19, 2015, 8:14:47 PM
+    Author     : studentc
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.menuitem li{
+    
+ color: blue;
+       padding: 5px;
+    float: left;
+   
+    list-style: none;
+   font-size: 20px;
+    
+    cursor: cell;
+    width:56px;
+    height:54px;
+    background-image: url("cssexample.jpg");
+        
+}
+
+#first{
+   
+    background-position: -0px -0px;
+}
+
+#second{
+    background-position: -0px -58px;
+}
+
+#third{
+    background-position: -0px -116px;
+}
+
+#forth{
+    background-position: -0px -174px;
+}
+
+#text{
+    background-image: none;
+    width: auto;
+    height:54px;
+    margin-left: 2px;
+    margin-right: 10px;
+    padding-top: 16px;
+}

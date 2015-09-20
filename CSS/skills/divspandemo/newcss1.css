@@ -1,0 +1,26 @@
+/* 
+    Document   : newcss1
+    Created on : Feb 12, 2015, 8:36:36 PM
+    Author     : studentc
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+span{
+    border: solid 5px black;
+    
+}
+
+div{
+    border: solid 5px red;
+    height: 200px;
+    width: 400px;
+   
+    margin: 25px auto;
+   padding: 5px;
+   float: left;
+}

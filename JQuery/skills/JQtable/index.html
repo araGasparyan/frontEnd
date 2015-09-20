@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+    </head>
+    <body>
+         
+        <table style="border: ted solid 1px;" id="test1">
+            <tr><td>sets</td><td>of</td><td>this</td></tr>
+           <tr><td>div</td><td>with</td><td></td></tr>
+        <tr><td>the</td><td>href</td><td>href</td></tr>
+                    </table>
+        
+        <br>
+        <br>
+        <br>
+        
+        <input id="test2" type="text">
+        
+        <input id="test3" type="button" value="Press">
+
+<script src="jquery-1.11.2.min.js"></script>
+
+<script>
+   
+     $(document).ready(function(){
+         
+  $("#test3").click(function(){
+      
+      var h=$("#test2").val();
+       $("#test1").append("<tr><td>"+h+"</td><td>"+h+"</td><td>"+h+"</td></tr>");
+        
+	});
+ 
+});
+    
+</script>
+
+
+    </body>
+</html>

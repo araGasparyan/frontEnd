@@ -1,0 +1,65 @@
+/* 
+    Document   : newcss2
+    Created on : Feb 12, 2015, 8:59:05 PM
+    Author     : studentc
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.position{
+  float: left;  
+  margin-left: 100px;
+}
+
+.menuitem{
+    
+    background-color: blue;
+       padding: 5px;
+    
+    margin-left: 3px;
+    list-style: none;
+    text-align: center;
+     border-radius: 25px 25px 0px 0px;
+    cursor: cell;
+        
+}
+
+.menuitem:hover{
+    background-color: red;
+}
+
+#first{
+    margin-left: 10px;
+}
+
+#vert{
+    float: left;
+    display: inline;
+}
+
+#firstli{
+    border-radius: 0px;
+    margin-bottom:  3px;
+     text-align: left;
+     
+}
+
+#secondli{
+    border-radius: 0px 10px 0px 10px;
+     margin-bottom:  3px;
+     text-align: left;
+    
+}
+
+#ffirsli{
+     border-radius: 10px 10px 0px 0px;
+     margin-bottom:  3px;
+     text-align: left;
+}
